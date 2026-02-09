@@ -54,23 +54,23 @@ int userSearchChoice()
     }
 }
 
-void handleSearch(int choice, Board b)
+bool handleSearch(int choice, Board b)
 {
     Search search;
     if (choice == 1)
     {
         cout << "Uniform Cost Search selected." << endl; // TODO: Implement uniform cost search
-        search.generalSearch(b, 1);
+        return search.generalSearch(b, 1);
     }
     else if (choice == 2)
     {
         cout << "A* with the Misplaced Tile heuristic selected." << endl; // TODO: Implement A* with the Misplaced Tile heuristic
-        search.generalSearch(b, 2);
+        return search.generalSearch(b, 2);
     }
     else if (choice == 3)
     {
         cout << "A* with the Manhattan Distance heuristic selected." << endl; // TODO: Implement A* with the Manhattan Distance heuristic
-        search.generalSearch(b, 3);
+        return search.generalSearch(b, 3);
     }
 }
 
@@ -79,5 +79,5 @@ int main()
     displayInstructions();
     Board board;
     board.printPuzzle();
-    handleSearch(userSearchChoice(), board);
+    cout << handleSearch(userSearchChoice(), board) << endl;
 }

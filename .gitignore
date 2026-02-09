@@ -1,4 +1,1 @@
-!*.cpp
-!*.h
-!*.hpp
-!.gitignore
+board
