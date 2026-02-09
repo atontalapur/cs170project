@@ -109,10 +109,26 @@ void Board::setChildren()
     children = childBoards;
 }
 
-
-void Board::printChildren() {
-    for (int i = 0; i < children.size(); i++) {
-        cout << "Child " << i + 1 << ":" << endl;
-        children[i].printPuzzle();
+void Board::printChildren()
+{
+    int count = 1;
+    for (Board& child : children)
+    {
+        cout << "Child " << count << ":" << endl;
+        child.printPuzzle();
+        count++;
     }
+}
+
+string Board::toString()
+{
+    string boardString = "";
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            boardString += to_string(board[i][j]) + " ";
+        }
+    }
+    return boardString;
 }

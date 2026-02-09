@@ -43,9 +43,11 @@ public:
         return children;
     }
 
-    void setChildren();  
-    
+    void setChildren();
+
     void printChildren();
+
+    string toString();
 };
 
 #endif

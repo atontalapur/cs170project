@@ -6,8 +6,6 @@
 #include <vector>
 #include <queue>
 
-
-
 struct Node
 {
     Board board;
@@ -26,9 +24,11 @@ struct Node
     }
 };
 
-struct CompareNode {
-    bool operator()(Node* a, Node* b) {
-        return a->fCost > b->fCost; 
+struct CompareNode
+{
+    bool operator()(Node *a, Node *b)
+    {
+        return a->fCost > b->fCost;
     }
 };
 
@@ -41,11 +41,14 @@ private:
 
 public:
     Search();
+    
     bool generalSearch(Board rootBoard, int queueingFunction);
     bool checkTerminalState(Board board);
     int getHeuristicCost(Board board, int heuristicType);
     int getMisplacedTileCost(Board board);
     int getManhattanDistanceCost(Board board);
+    void expand(Node *node, priority_queue<Node *, vector<Node *>, CompareNode> &nodes, vector<Node *> &visited, int queueingFunction);
+    bool isVisited(Board board, vector<Node *> &visited);
 
     int getVisitedNodes()
     {

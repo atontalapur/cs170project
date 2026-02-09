@@ -4,9 +4,9 @@
 #include <vector>
 #include <queue>
 #include <chrono>
+#include <algorithm>
 
 using namespace std::chrono;
-
 
 Search::Search()
 {
@@ -33,7 +33,7 @@ int Search::getHeuristicCost(Board board, int heuristicType)
 
 int Search::getMisplacedTileCost(Board board)
 {
-    vector<std::vector<int>> terminalState = {
+    vector<std::vector<int>> terminalState = { // Goal State
         {1, 2, 3},
         {4, 5, 6},
         {7, 8, 0}};
@@ -43,9 +43,9 @@ int Search::getMisplacedTileCost(Board board)
     {
         for (int j = 0; j < 3; j++)
         {
-            if (board.getBoardValue(i, j) != 0 && (board.getBoardValue(i, j) != terminalState[i][j]))
+            if (board.getBoardValue(i, j) != 0 && (board.getBoardValue(i, j) != terminalState[i][j])) // If the value is not 0, and at a given position, the value is different than the goal state
             {
-                misplacedTiles++;
+                misplacedTiles++; // Increment the number of misplaced tiles
             }
         }
     }
@@ -78,15 +78,14 @@ int Search::getManhattanDistanceCost(Board board)
 
 bool Search::generalSearch(Board rootBoard, int queueingFunction)
 {
-    auto start = high_resolution_clock::now(); // Track how long the search takes
+    auto start = high_resolution_clock::now(); // store the start time
 
-
-    vector<Node *> visited; // track the nodes that have been visited
-    priority_queue<Node *, vector<Node *>, CompareNode> nodes; // MaxHeap cturned into minHeap by CompareNode struct
+    vector<Node *> visited;                                            // track the nodes that have been visited
+    priority_queue<Node *, vector<Node *>, CompareNode> nodes;         // MaxHeap cturned into minHeap by CompareNode struct
     int heuristicCost = getHeuristicCost(rootBoard, queueingFunction); // determine which search to do
     cout << "Heuristic cost of the root node: " << heuristicCost << endl;
 
-    Node *root = new Node(rootBoard, nullptr, 0, heuristicCost);// create the root node with gCost = 0 and hCost = heuristic cost of the root board
+    Node *root = new Node(rootBoard, nullptr, 0, heuristicCost); // create the root node with gCost = 0 and hCost = heuristic cost of the root board
     nodes.push(root);
 
     while (nodes.empty() == false)
@@ -102,21 +101,21 @@ bool Search::generalSearch(Board rootBoard, int queueingFunction)
         if (checkTerminalState(currNode->board)) // Terminal test
         {
             cout << "Goal state reached!" << endl;
-            auto end = high_resolution_clock::now();
-            auto duration = duration_cast<seconds>(end - start);
+            auto end = high_resolution_clock::now(); // store the end time
+            auto duration = duration_cast<seconds>(end - start); // duration of process in seconds
             setTime(duration.count());
-            return true;
+            return true; // We good!! We found the goal state in our search
         }
 
         visited.push_back(currNode); // Explored node pushed to array
-        visitedNodes++; 
+        visitedNodes++;
 
         // TODO: expand them
-        currNode->board.setChildren();
-        currNode->board.printChildren();
-
+        currNode->board.setChildren(); // find all the next possible moves and save them as children
+        // currNode->board.printChildren();
+        expand(currNode, nodes, visited, queueingFunction); // analyze which children node takes us closer to goal state
+        
     }
-
 
     return false;
 }
@@ -138,4 +137,27 @@ bool Search::checkTerminalState(Board board)
         }
     }
     return true;
+}
+
+
+void Search::expand(Node *node, priority_queue<Node *, vector<Node *>, CompareNode> &nodes, vector<Node *> &visited, int queueingFunction) {
+    for (Board child : node->board.getChildren()) {
+        if (!isVisited(child, visited)) { // If the child node has not been visited
+            int gCost = node->gCost + 1; // Increment gCost by 1 for each move
+            int hCost = getHeuristicCost(child, queueingFunction); // Get the heuristic cost of the child node
+            Node *childNode = new Node(child, node, gCost, hCost); // Create a new node for the child
+            nodes.push(childNode); // Add the child node to the priority queue
+        }
+    }
+}
+
+
+bool Search::isVisited(Board board, vector<Node *> &visited) {
+    string boardState = board.toString();
+    for (Node *node : visited) {
+        if (node->board.toString() == boardState) {
+            return true;
+        }
+    }
+    return false;
 }
