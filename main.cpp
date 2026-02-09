@@ -83,6 +83,7 @@ int main()
 {
     displayInstructions();
     Board board;
+    board.fillTable();
     board.printPuzzle();
-    cout << handleSearch(userSearchChoice(), board) << endl;
+    handleSearch(userSearchChoice(), board);
 }

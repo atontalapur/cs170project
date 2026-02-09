@@ -7,6 +7,7 @@
 
 using namespace std::chrono;
 
+
 Search::Search()
 {
     visitedNodes = 0;
@@ -112,6 +113,7 @@ bool Search::generalSearch(Board rootBoard, int queueingFunction)
 
         // TODO: expand them
         currNode->board.setChildren();
+        currNode->board.printChildren();
 
     }
 

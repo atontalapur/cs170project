@@ -1,11 +1,10 @@
 #include "board.h"
 #include <iostream>
 #include <string>
-
+using namespace std;
 Board::Board()
 {
-    fillTable();
-    // TODO: initialize children vector
+    children = {};
 }
 
 void Board::fillTable()
@@ -47,7 +46,6 @@ void Board::fillTable()
 
 void Board::printPuzzle()
 {
-    cout << "CURR BOARD " << endl;
     for (int i = 0; i < 3; i++)
     { // Tracks the rows
         for (int j = 0; j < 3; j++)
@@ -76,40 +74,45 @@ void Board::setChildren()
         }
     }
 
-    for (int i = 0; i < 4; i++)
+    // If increasing one row of the location of '0' does not exceed the bounds, there is a
+    // valid move down.
+    if (blankRow + 1 < 3)
     {
-        // If increasing one row of the location of '0' does not exceed the bounds, there is a
-        // valid move down.
-        if (blankRow + 1 < 3)
-        {
-            Board child = *this;
-            swap(child.board[blankRow][blankCol], child.board[blankRow + 1][blankCol]);
-            childBoards.push_back(child);
-        }
-        // If decreasing one row of the location of '0' does not exceed the bounds, there is a
-        // valid move up.
-        if (blankRow - 1 >= 0)
-        {
-            Board child = *this;
-            swap(child.board[blankRow][blankCol], child.board[blankRow - 1][blankCol]);
-            childBoards.push_back(child);
-        }
-        // If increasing one column of the location of '0' does not exceed the bounds, there is a
-        // valid move right.
-        if (blankCol + 1 < 3)
-        {
-            Board child = *this;
-            swap(child.board[blankRow][blankCol], child.board[blankRow][blankCol + 1]);
-            childBoards.push_back(child);
-        }
-        // If decreasing one column of the location of '0' does not exceed the bounds, there is a
-        // valid move left.
-        if (blankCol - 1 >= 0)
-        {
-            Board child = *this;
-            swap(child.board[blankRow][blankCol], child.board[blankRow][blankCol - 1]);
-            childBoards.push_back(child);
-        }
+        Board child = *this;
+        swap(child.board[blankRow][blankCol], child.board[blankRow + 1][blankCol]);
+        childBoards.push_back(child);
+    }
+    // If decreasing one row of the location of '0' does not exceed the bounds, there is a
+    // valid move up.
+    if (blankRow - 1 >= 0)
+    {
+        Board child = *this;
+        swap(child.board[blankRow][blankCol], child.board[blankRow - 1][blankCol]);
+        childBoards.push_back(child);
+    }
+    // If increasing one column of the location of '0' does not exceed the bounds, there is a
+    // valid move right.
+    if (blankCol + 1 < 3)
+    {
+        Board child = *this;
+        swap(child.board[blankRow][blankCol], child.board[blankRow][blankCol + 1]);
+        childBoards.push_back(child);
+    }
+    // If decreasing one column of the location of '0' does not exceed the bounds, there is a
+    // valid move left.
+    if (blankCol - 1 >= 0)
+    {
+        Board child = *this;
+        swap(child.board[blankRow][blankCol], child.board[blankRow][blankCol - 1]);
+        childBoards.push_back(child);
     }
     children = childBoards;
+}
+
+
+void Board::printChildren() {
+    for (int i = 0; i < children.size(); i++) {
+        cout << "Child " << i + 1 << ":" << endl;
+        children[i].printPuzzle();
+    }
 }

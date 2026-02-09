@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <array>
+#include <iostream>
 using namespace std;
 
 class Board
@@ -42,7 +43,9 @@ public:
         return children;
     }
 
-    void setChildren();    
+    void setChildren();  
+    
+    void printChildren();
 };
 
 #endif
