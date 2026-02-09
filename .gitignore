@@ -1,3 +1,4 @@
-.vscode
-puzzle
-board
+!*.cpp
+!*.h
+!*.hpp
+!.gitignore
