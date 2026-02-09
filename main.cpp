@@ -56,6 +56,11 @@ int userSearchChoice()
 
 bool handleSearch(int choice, Board b)
 {
+    if (choice < 1 || choice > 3)
+    {
+        cout << "Invalid input. Please enter a number between 1 and 3." << endl;
+        return handleSearch(userSearchChoice(), b);
+    }
     Search search;
     if (choice == 1)
     {
@@ -67,7 +72,7 @@ bool handleSearch(int choice, Board b)
         cout << "A* with the Misplaced Tile heuristic selected." << endl; // TODO: Implement A* with the Misplaced Tile heuristic
         return search.generalSearch(b, 2);
     }
-    else if (choice == 3)
+    else
     {
         cout << "A* with the Manhattan Distance heuristic selected." << endl; // TODO: Implement A* with the Manhattan Distance heuristic
         return search.generalSearch(b, 3);

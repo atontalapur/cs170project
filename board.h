@@ -42,10 +42,7 @@ public:
         return children;
     }
 
-    void setChildren(vector<Board> c)
-    {
-        children = c;
-    }
+    void setChildren();    
 };
 
 #endif

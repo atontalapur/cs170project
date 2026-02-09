@@ -16,15 +16,18 @@ Search::Search()
 
 int Search::getHeuristicCost(Board board, int heuristicType)
 {
-    if (heuristicType == 2)
+    if (heuristicType == 1)
+    {
+        return 0; // Uniform Cost Search has no heuristic cost
+    }
+    else if (heuristicType == 2)
     {
         return getMisplacedTileCost(board);
     }
-    else if (heuristicType == 3)
+    else
     {
         return getManhattanDistanceCost(board);
     }
-    return 0;
 }
 
 int Search::getMisplacedTileCost(Board board)
@@ -107,7 +110,9 @@ bool Search::generalSearch(Board rootBoard, int queueingFunction)
         visited.push_back(currNode); // Explored node pushed to array
         visitedNodes++; 
 
-        // TODO: Generate children and expand them
+        // TODO: expand them
+        currNode->board.setChildren();
+
     }
 
 
