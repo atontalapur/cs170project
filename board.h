@@ -9,14 +9,13 @@ class Board {
 
     public:
         Board();
-
+        /**
+         * Fills the 8-puzzle board with user input. 
+         */
         void fillTable();
         /**
          * Prints the current state of the 8-puzzle board.
          */
         void printPuzzle();
-        /**
-         * @return The number of misplaced tiles compared to the goal state.
-         * @brief Calculates the number of tiles that are not in their goal position, excluding the blank tile (0). 
-         */
+        
 };

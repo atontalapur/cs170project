@@ -2,7 +2,7 @@
 #include "board.h"
 
 
-void instructions() {
+void displayInstructions() {
     cout << "=======INSTRUCTIONS BEGINS=======" << endl;
     cout << "Initialize the current state of the board by entering all the numbers and hitting 'enter' after each number." << endl;
     cout << "Use '0' to represent the blank tile." << endl;
@@ -26,11 +26,38 @@ void instructions() {
     cout << 0 << endl << "=======INSTRUCTIONS ENDS=======" << endl;
 }
 
+int userSearchChoice() {
+    int choice = 0;
+    cout << "Enter 1 to choose Uniform Cost, 2 for A* with the Misplaced Tile heuristic, and 3 for A* with the Manhattan Distance heuristic." << endl;
+    cin >> choice;
+    if (choice) {
+        if (choice < 1 || choice > 3) {
+            cout << "Invalid input. Please enter a number between 1 and 3." << endl;
+            return userSearchChoice();
+        } else {
+            return choice;
+        }
+    } else {
+        cout << "Invalid input. Please enter a number between 1 and 3." << endl;
+        return userSearchChoice();
+    }
+}
+
+void handleSearch(int choice) {
+    if (choice == 1) {
+        cout << "Uniform Cost Search selected." << endl; // TODO: Implement uniform cost search
+    } else if (choice == 2) {
+        cout << "A* with the Misplaced Tile heuristic selected." << endl; // TODO: Implement A* with the Misplaced Tile heuristic
+    } else if (choice == 3) {
+        cout << "A* with the Manhattan Distance heuristic selected." << endl; // TODO: Implement A* with the Manhattan Distance heuristic
+
+    }
+}
 
 int main() {
-    instructions();
+    displayInstructions();
     Board board;
     board.printPuzzle();
-    
+    handleSearch(userSearchChoice());
 }
 
