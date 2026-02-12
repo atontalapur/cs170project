@@ -133,7 +133,7 @@ bool Search::checkTerminalState(Board board)
     {
         for (int j = 0; j < 3; j++)
         {
-            if (board.getBoardValue(i, j) != 0 && (board.getBoardValue(i, j) != terminalState[i][j]))
+            if ((board.getBoardValue(i, j) != terminalState[i][j]))
             {
                 return false;
             }
@@ -149,9 +149,9 @@ void Search::expand(Node *node, priority_queue<Node *, vector<Node *>, CompareNo
         if (!isVisited(child, visited))
         {
 
-            int gCost = node->gCost + 1;                           // Increment gCost by 1 for each move
+            int gCost = node->gCost + 1;                           
             int hCost = getHeuristicCost(child, queueingFunction); // Get the heuristic cost of the child node
-            Node *childNode = new Node(child, node, gCost, hCost); // Create a new node for the child
+            Node *childNode = new Node(child, node, gCost, hCost); 
             nodes.push(childNode);
             
         }
