@@ -22,12 +22,12 @@ void Board::fillTable()
         if (num < 0 || num > 8)
         {
             cout << "Invalid input. Please enter a number between 0 and 8." << endl; // eight puzzle can only have numbers ranging from 0 to 8
-            fillTable();
+            return;
         }
         else if (find(inputs.begin(), inputs.end(), num) != inputs.end())
         {
             cout << "Invalid input. Please enter a number that has not been entered before." << endl; // each number can only be entered once
-            fillTable();
+            return;
         }
         else
         {

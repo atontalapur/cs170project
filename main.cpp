@@ -35,39 +35,26 @@ int userSearchChoice()
     int choice = 0;
     cout << "Enter 1 to choose Uniform Cost, 2 for A* with the Misplaced Tile heuristic, and 3 for A* with the Manhattan Distance heuristic." << endl;
     cin >> choice;
-    if (choice)
+    if ((choice < 1 || choice > 3) && !choice)
     {
-        if (choice < 1 || choice > 3)
-        {
-            cout << "Invalid input. Please enter a number between 1 and 3." << endl;
-            return userSearchChoice();
-        }
-        else
-        {
-            return choice;
-        }
+        cout << "Invalid input. Please enter a number between 1 and 3." << endl;
+        exit(0);
     }
     else
     {
-        cout << "Invalid input. Please enter a number between 1 and 3." << endl;
-        return userSearchChoice();
+        return choice;
     }
 }
+
 /**
  * Performs the search algorithm based on the user's choice and returns true if a solution is found, false otherwise.
  */
 bool handleSearch(int choice, Board b)
 {
-    // Input Validation
-    if (choice < 1 || choice > 3)
-    {
-        cout << "Invalid input. Please enter a number between 1 and 3." << endl;
-        return handleSearch(userSearchChoice(), b);
-    }
     Search search;
     if (choice == 1)
     {
-        cout << "Uniform Cost Search selected." << endl; 
+        cout << "Uniform Cost Search selected." << endl;
         return search.generalSearch(b, 1);
     }
     else if (choice == 2)
@@ -77,7 +64,7 @@ bool handleSearch(int choice, Board b)
     }
     else
     {
-        cout << "A* with the Manhattan Distance heuristic selected." << endl; 
+        cout << "A* with the Manhattan Distance heuristic selected." << endl;
         return search.generalSearch(b, 3);
     }
 }
@@ -87,6 +74,6 @@ int main()
     displayInstructions();
     Board board;
     board.fillTable(); // User input to fill the board with initital setup
-    board.printPuzzle(); 
+    board.printPuzzle();
     handleSearch(userSearchChoice(), board); // starts the search algorithm based on user preference
 }

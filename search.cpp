@@ -5,6 +5,7 @@
 #include <queue>
 #include <chrono>
 #include <algorithm>
+#include <iomanip>
 
 using namespace std::chrono;
 
@@ -25,10 +26,7 @@ int Search::getHeuristicCost(Board board, int heuristicType)
     {
         return getMisplacedTileCost(board);
     }
-    else
-    {
-        return getManhattanDistanceCost(board);
-    }
+    return getManhattanDistanceCost(board);
 }
 
 int Search::getMisplacedTileCost(Board board)
@@ -45,7 +43,7 @@ int Search::getMisplacedTileCost(Board board)
         {
             if (board.getBoardValue(i, j) != 0 && (board.getBoardValue(i, j) != terminalState[i][j])) // If the value is not 0, and at a given position, the value is different than the goal state
             {
-                misplacedTiles++; // Increment the number of misplaced tiles
+                misplacedTiles++;
             }
         }
     }
@@ -78,15 +76,15 @@ int Search::getManhattanDistanceCost(Board board)
 
 bool Search::generalSearch(Board rootBoard, int queueingFunction)
 {
-    auto start = high_resolution_clock::now(); // store the start time
 
     vector<Node *> visited;                                            // track the nodes that have been visited
     priority_queue<Node *, vector<Node *>, CompareNode> nodes;         // MaxHeap cturned into minHeap by CompareNode struct
     int heuristicCost = getHeuristicCost(rootBoard, queueingFunction); // determine which search to do
-    cout << "Heuristic cost of the root node: " << heuristicCost << endl;
+    // cout << "Heuristic cost of the root node: " << heuristicCost << endl;
 
     Node *root = new Node(rootBoard, nullptr, 0, heuristicCost); // create the root node with gCost = 0 and hCost = heuristic cost of the root board
     nodes.push(root);
+    auto start = high_resolution_clock::now(); // store the start time
 
     while (nodes.empty() == false)
     {
@@ -100,19 +98,18 @@ bool Search::generalSearch(Board rootBoard, int queueingFunction)
         // TA REMARKS: display g(n) and h(n) of the current node
         // TA REMARKS: End should have g(n) - d and small h(n)
 
-        cout << "Current g(n): " << currNode->gCost << "Current h(n): " << currNode->hCost << endl;
-
+        cout << "Current g(n): " << currNode->gCost << " Current h(n): " << currNode->hCost << endl;
+        // TA REMARK: TODO: Solution Depth, Number of nodes expanded, max queue size
         if (checkTerminalState(currNode->board)) // Terminal test
         {
             cout << "Goal state reached!" << endl;
-            auto end = high_resolution_clock::now();                  // store the end time
-            auto duration = duration_cast<microseconds>(end - start); // duration of process in seconds
-            setTime(duration.count());
+            auto end = high_resolution_clock::now(); // store the end time
+            setTime(duration_cast<microseconds>(end - start).count());
             cout << "Solution Depth: " << currNode->gCost << endl;
             cout << "Number of nodes expanded: " << getVisitedNodes() << endl;
             cout << "Max queue size: " << (int)(nodes.size()) << endl;
-            cout << "Time taken: " << getTime() << " seconds" << endl;
-            return true; // We good!! We found the goal state in our search
+            cout << "Time taken: " << setprecision(7) << getTime() / 1000000.0 << " seconds" << endl;
+            return true; // we found the goal state in our search
         }
 
         visited.push_back(currNode); // Explored node pushed to array
@@ -124,7 +121,6 @@ bool Search::generalSearch(Board rootBoard, int queueingFunction)
     }
     cout << "Solution not found." << endl;
     return false;
-    // TODO: Solution Depth, Number of noed expanded, max queue size
 }
 
 bool Search::checkTerminalState(Board board)
@@ -151,12 +147,13 @@ void Search::expand(Node *node, priority_queue<Node *, vector<Node *>, CompareNo
     for (Board child : node->board.getChildren())
     {
         if (!isVisited(child, visited))
-        {                                                          // If the child node has not been visited
+        {
+
             int gCost = node->gCost + 1;                           // Increment gCost by 1 for each move
             int hCost = getHeuristicCost(child, queueingFunction); // Get the heuristic cost of the child node
             Node *childNode = new Node(child, node, gCost, hCost); // Create a new node for the child
             nodes.push(childNode);
-            visited.push_back(childNode); // Add the child node to the priority queue
+            
         }
     }
 }
