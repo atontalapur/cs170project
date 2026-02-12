@@ -33,10 +33,10 @@ int Search::getHeuristicCost(Board board, int heuristicType)
 
 int Search::getMisplacedTileCost(Board board)
 {
-    vector<std::vector<int>> terminalState = { // Goal State
-        {1, 2, 3},
-        {4, 5, 6},
-        {7, 8, 0}};
+    vector<std::vector<int>> terminalState = {// Goal State
+                                              {1, 2, 3},
+                                              {4, 5, 6},
+                                              {7, 8, 0}};
 
     int misplacedTiles = 0;
     for (int i = 0; i < 3; i++)
@@ -92,32 +92,39 @@ bool Search::generalSearch(Board rootBoard, int queueingFunction)
     {
         if ((int)(nodes.size()) > depth) // update depth of the solution
         {
-            setDepth((int)(nodes.size()));
+            setDepth((int)(nodes.size() - 1));
         }
 
         Node *currNode = nodes.top(); // get the node with the lowest fCost
         nodes.pop();
+        // TA REMARKS: display g(n) and h(n) of the current node
+        // TA REMARKS: End should have g(n) - d and small h(n)
+
+        cout << "Current g(n): " << currNode->gCost << "Current h(n): " << currNode->hCost << endl;
 
         if (checkTerminalState(currNode->board)) // Terminal test
         {
             cout << "Goal state reached!" << endl;
-            auto end = high_resolution_clock::now(); // store the end time
-            auto duration = duration_cast<seconds>(end - start); // duration of process in seconds
+            auto end = high_resolution_clock::now();                  // store the end time
+            auto duration = duration_cast<microseconds>(end - start); // duration of process in seconds
             setTime(duration.count());
+            cout << "Solution Depth: " << currNode->gCost << endl;
+            cout << "Number of nodes expanded: " << getVisitedNodes() << endl;
+            cout << "Max queue size: " << (int)(nodes.size()) << endl;
+            cout << "Time taken: " << getTime() << " seconds" << endl;
             return true; // We good!! We found the goal state in our search
         }
 
         visited.push_back(currNode); // Explored node pushed to array
         visitedNodes++;
 
-        // TODO: expand them
         currNode->board.setChildren(); // find all the next possible moves and save them as children
         // currNode->board.printChildren();
         expand(currNode, nodes, visited, queueingFunction); // analyze which children node takes us closer to goal state
-        
     }
-
+    cout << "Solution not found." << endl;
     return false;
+    // TODO: Solution Depth, Number of noed expanded, max queue size
 }
 
 bool Search::checkTerminalState(Board board)
@@ -139,23 +146,28 @@ bool Search::checkTerminalState(Board board)
     return true;
 }
 
-
-void Search::expand(Node *node, priority_queue<Node *, vector<Node *>, CompareNode> &nodes, vector<Node *> &visited, int queueingFunction) {
-    for (Board child : node->board.getChildren()) {
-        if (!isVisited(child, visited)) { // If the child node has not been visited
-            int gCost = node->gCost + 1; // Increment gCost by 1 for each move
+void Search::expand(Node *node, priority_queue<Node *, vector<Node *>, CompareNode> &nodes, vector<Node *> &visited, int queueingFunction)
+{
+    for (Board child : node->board.getChildren())
+    {
+        if (!isVisited(child, visited))
+        {                                                          // If the child node has not been visited
+            int gCost = node->gCost + 1;                           // Increment gCost by 1 for each move
             int hCost = getHeuristicCost(child, queueingFunction); // Get the heuristic cost of the child node
             Node *childNode = new Node(child, node, gCost, hCost); // Create a new node for the child
-            nodes.push(childNode); // Add the child node to the priority queue
+            nodes.push(childNode);
+            visited.push_back(childNode); // Add the child node to the priority queue
         }
     }
 }
 
-
-bool Search::isVisited(Board board, vector<Node *> &visited) {
+bool Search::isVisited(Board board, vector<Node *> &visited)
+{
     string boardState = board.toString();
-    for (Node *node : visited) {
-        if (node->board.toString() == boardState) {
+    for (Node *node : visited)
+    {
+        if (node->board.toString() == boardState)
+        {
             return true;
         }
     }
