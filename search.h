@@ -41,7 +41,7 @@ private:
 
 public:
     Search();
-    
+
     bool generalSearch(Board rootBoard, int queueingFunction);
     bool checkTerminalState(Board board);
     int getHeuristicCost(Board board, int heuristicType);

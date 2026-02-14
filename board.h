@@ -11,6 +11,7 @@ class Board
 private:
     array<array<int, 3>, 3> board;
     vector<Board> children;
+    int numInversions;
 
 public:
     Board();
@@ -48,6 +49,8 @@ public:
     void printChildren();
 
     string toString();
+
+    bool isValid();
 };
 
 #endif

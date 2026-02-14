@@ -13,24 +13,30 @@ void Board::fillTable()
     int num = 0; // placeholder for user input
     int row = 0;
     int col = 0;
-    int counter = 0;         // track the number of inputs to terminate the while loop
+    int counter = 0; // track the number of inputs to terminate the while loop
+    int numInversions = 0;
     vector<int> inputs = {}; // track the numbers that have been inputted to check for duplicates
     cout << "Start entering numbers for the board: " << endl;
     while (counter < 9)
     {
         cin >> num;
-        if ((num < 0 || num > 8) && !num) 
+        if ((num < 0 || num > 8) || !num)
         {
             cout << "Invalid input. Please enter a number between 0 and 8." << endl; // eight puzzle can only have numbers ranging from 0 to 8
-            return;
+            exit(1);
         }
         else if (find(inputs.begin(), inputs.end(), num) != inputs.end())
         {
             cout << "Invalid input. Please enter a number that has not been entered before." << endl; // each number can only be entered once
-            return;
+            exit(1);
         }
         else
+
         {
+            if (counter > 0 && (inputs[counter] < inputs[counter - 1]))
+            {
+                this->numInversions++;
+            }
             board[row][col] = num; // fill the respective position with the user input
             inputs.push_back(num);
             col++;
@@ -43,7 +49,6 @@ void Board::fillTable()
         }
     }
 }
-
 // void Board::printPuzzle()
 // {
 //     for (int i = 0; i < 3; i++)
@@ -129,4 +134,9 @@ string Board::toString()
         }
     }
     return boardString;
+}
+
+bool Board::isValid()
+{
+    return this->numInversions % 2 == 0;
 }

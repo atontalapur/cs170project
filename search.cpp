@@ -149,11 +149,10 @@ void Search::expand(Node *node, priority_queue<Node *, vector<Node *>, CompareNo
         if (!isVisited(child, visited))
         {
 
-            int gCost = node->gCost + 1;                           
+            int gCost = node->gCost + 1;
             int hCost = getHeuristicCost(child, queueingFunction); // Get the heuristic cost of the child node
-            Node *childNode = new Node(child, node, gCost, hCost); 
+            Node *childNode = new Node(child, node, gCost, hCost);
             nodes.push(childNode);
-            
         }
     }
 }

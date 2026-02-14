@@ -74,6 +74,13 @@ int main()
     displayInstructions();
     Board board;
     board.fillTable(); // User input to fill the board with initital setup
-    board.printPuzzle();
-    handleSearch(userSearchChoice(), board); // starts the search algorithm based on user preference
+    if (board.isValid())
+    {
+        handleSearch(userSearchChoice(), board); // starts the search algorithm based on user preference
+    }
+    else
+    {
+        cout << "No sulution exists for this board." << endl;
+        exit(1);
+    }
 }
