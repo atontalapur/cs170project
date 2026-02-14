@@ -109,6 +109,8 @@ bool Search::generalSearch(Board rootBoard, int queueingFunction)
             cout << "Number of nodes expanded: " << getVisitedNodes() << endl;
             cout << "Max queue size: " << (int)(nodes.size()) << endl;
             cout << "Time taken: " << setprecision(7) << getTime() / 1000000.0 << " seconds" << endl;
+            cout << "Soliution" << endl;
+            printSolution(currNode);
             return true; // we found the goal state in our search
         }
 
@@ -168,4 +170,15 @@ bool Search::isVisited(Board board, vector<Node *> &visited)
         }
     }
     return false;
+}
+
+void Search::printSolution(Node *node)
+{
+    if (node->parent == nullptr)
+    {
+        node->board.printPuzzle();
+        return;
+    }
+    printSolution(node->parent);
+    node->board.printPuzzle();
 }

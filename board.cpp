@@ -52,17 +52,19 @@ bool Board::fillTable()
 
 
 }
-// void Board::printPuzzle()
-// {
-//     for (int i = 0; i < 3; i++)
-//     { // Tracks the rows
-//         for (int j = 0; j < 3; j++)
-//         { // Prints all columns in the curr row
-//             cout << board[i][j] << " ";
-//         }
-//         cout << endl;
-//     }
-// }
+void Board::printPuzzle()
+{
+    cout << "________" << endl;
+    for (int i = 0; i < 3; i++)
+    { // Tracks the rows
+        for (int j = 0; j < 3; j++)
+        { // Prints all columns in the curr row
+            cout << board[i][j] << " ";
+        }
+        cout << endl;
+    }
+    cout << "________" << endl;
+}
 
 void Board::setChildren()
 {
@@ -156,3 +158,4 @@ bool Board::isValid(vector<int> inputs)
 
     return inversionCount % 2 == 0;
 }
+

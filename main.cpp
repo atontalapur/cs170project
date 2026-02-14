@@ -77,6 +77,7 @@ int main()
     if ( board.fillTable())
     {
         handleSearch(userSearchChoice(), board); // starts the search algorithm based on user preference
+        
     }
     else
     {

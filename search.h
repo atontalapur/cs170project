@@ -49,6 +49,7 @@ public:
     int getManhattanDistanceCost(Board board);
     void expand(Node *node, priority_queue<Node *, vector<Node *>, CompareNode> &nodes, vector<Node *> &visited, int queueingFunction);
     bool isVisited(Board board, vector<Node *> &visited);
+    void printSolution(Node *node);
 
     int getVisitedNodes()
     {
