@@ -73,8 +73,8 @@ int main()
 {
     displayInstructions();
     Board board;
-    board.fillTable(); // User input to fill the board with initital setup
-    if (board.isValid())
+    // User input to fill the board with initital setup
+    if ( board.fillTable())
     {
         handleSearch(userSearchChoice(), board); // starts the search algorithm based on user preference
     }

@@ -18,7 +18,7 @@ public:
     /**
      * Fills the 8-puzzle board with user input.
      */
-    void fillTable();
+    bool fillTable();
     /**
      * Prints the current state of the 8-puzzle board.
      */
@@ -50,7 +50,7 @@ public:
 
     string toString();
 
-    bool isValid();
+    bool isValid(vector<int> inputs);
 };
 
 #endif
