@@ -76,6 +76,7 @@ def backward_elimination(features, labels):
     curr_features = set(range(1, features.shape[1] + 1))
     best_feature = curr_features.copy()
     best_accuracy = evaluate(features, labels, curr_features)
+    previous_level_accuracy = best_accuracy
 
     for i in range(features.shape[1]):
         best_level_accuracy = 0
@@ -103,6 +104,7 @@ def backward_elimination(features, labels):
             best_feature = (curr_features - {worst_level_feature}).copy()
         if worst_level_feature != -1:
             curr_features.remove(worst_level_feature)
+            previous_level_accuracy = best_level_accuracy
         print(
             "Feature set ",
             sorted(best_feature),
