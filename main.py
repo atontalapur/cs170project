@@ -47,14 +47,22 @@ def forward_selection(features, labels):
                 best_level_accuracy = accuracy
                 best_level_feature = feature
         if i > 0 and best_level_accuracy < previous_level_accuracy:
-            print("(Warning: Accuracy has decreased! Continuing search in case of local maxima)")
+            print(
+                "(Warning: Accuracy has decreased! Continuing search in case of local maxima)"
+            )
         if best_level_accuracy > best_accuracy:
             best_accuracy = best_level_accuracy
             best_feature = (curr_features | {best_level_feature}).copy()
         if best_level_feature != -1:
             curr_features.add(best_level_feature)
             previous_level_accuracy = best_level_accuracy
-        print( "Feature set ", sorted(best_feature), " was the best, accuracy is", best_accuracy, "%")
+        print(
+            "Feature set ",
+            sorted(best_feature),
+            " was the best, accuracy is",
+            best_accuracy,
+            "%",
+        )
     print(
         "Finished search!! The best feature subset is {",
         *sorted(best_feature),
