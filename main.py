@@ -93,11 +93,23 @@ def backward_elimination(features, labels):
                 best_level_accuracy = accuracy
                 worst_level_feature = feature
 
+        if best_level_accuracy < previous_level_accuracy:
+            print(
+                "(Warning: Accuracy has decreased! Continuing search in case of local maxima)"
+            )
+
         if best_level_accuracy > best_accuracy:
             best_accuracy = best_level_accuracy
             best_feature = (curr_features - {worst_level_feature}).copy()
         if worst_level_feature != -1:
             curr_features.remove(worst_level_feature)
+        print(
+            "Feature set ",
+            sorted(best_feature),
+            " was the best, accuracy is",
+            best_accuracy,
+            "%",
+        )
     print(
         "Finished search!! The best feature subset is {",
         *sorted(best_feature),
