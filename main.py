@@ -145,6 +145,7 @@ def main():
     print(
         f"Running nearest neighbor with all {features.shape[1]} features, using 'leaving-one-out' evaluation, I get an accuracy of {accuracy:.1f}%"
     )
+    print("Beginning search.")
     if algorithmChoice == "1":
         forward_selection(features, labels)
     elif algorithmChoice == "2":
