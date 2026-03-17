@@ -1,6 +1,4 @@
-﻿1) Forward Selection 
-
-
+1) Forward Selection 
 Welcome to Advaith Tontalapur's Feature Selection Algorithm.
 Type in the name of the file to test: CS170_Small_DataSet__26.txt
 Type the number of the algorithm you want to run. 
@@ -9,184 +7,178 @@ Type the number of the algorithm you want to run.
 1
 This data has  16 features (not including the class attribute), with  500 instances.
 Running nearest neighbor with all 16 features, using 'leaving-one-out' evaluation, I get an accuracy of 73.4%
-
-
-Using feature(s) {1} accuracy is 70.80%
-Using feature(s) {2} accuracy is 71.00%
-Using feature(s) {3} accuracy is 69.20%
-Using feature(s) {4} accuracy is 66.60%
-Using feature(s) {5} accuracy is 70.80%
-Using feature(s) {6} accuracy is 71.20%
-Using feature(s) {7} accuracy is 86.80%
-Using feature(s) {8} accuracy is 67.60%
-Using feature(s) {9} accuracy is 70.60%
-Using feature(s) {10} accuracy is 68.80%
-Using feature(s) {11} accuracy is 69.00%
-Using feature(s) {12} accuracy is 67.00%
-Using feature(s) {13} accuracy is 69.00%
-Using feature(s) {14} accuracy is 70.00%
-Using feature(s) {15} accuracy is 72.20%
-Using feature(s) {16} accuracy is 70.20%
-Feature set {7} was the best for this level, accuracy is 86.80%
-Using feature(s) {1, 7} accuracy is 82.60%
-Using feature(s) {2, 7} accuracy is 82.60%
-Using feature(s) {3, 7} accuracy is 85.80%
-Using feature(s) {4, 7} accuracy is 84.20%
-Using feature(s) {5, 7} accuracy is 83.00%
-Using feature(s) {6, 7} accuracy is 82.20%
-Using feature(s) {7, 8} accuracy is 85.40%
-Using feature(s) {7, 9} accuracy is 96.20%
-Using feature(s) {7, 10} accuracy is 86.00%
-Using feature(s) {7, 11} accuracy is 84.80%
-Using feature(s) {7, 12} accuracy is 83.00%
-Using feature(s) {7, 13} accuracy is 83.60%
-Using feature(s) {7, 14} accuracy is 82.60%
-Using feature(s) {7, 15} accuracy is 84.80%
-Using feature(s) {7, 16} accuracy is 86.40%
-Feature set {7, 9} was the best for this level, accuracy is 96.20%
-Using feature(s) {1, 7, 9} accuracy is 93.40%
-Using feature(s) {2, 7, 9} accuracy is 92.80%
-Using feature(s) {3, 7, 9} accuracy is 94.00%
-Using feature(s) {4, 7, 9} accuracy is 93.60%
-Using feature(s) {5, 7, 9} accuracy is 92.40%
-Using feature(s) {6, 7, 9} accuracy is 90.40%
-Using feature(s) {7, 8, 9} accuracy is 92.80%
-Using feature(s) {7, 9, 10} accuracy is 92.20%
-Using feature(s) {7, 9, 11} accuracy is 92.00%
-Using feature(s) {7, 9, 12} accuracy is 92.00%
-Using feature(s) {7, 9, 13} accuracy is 89.80%
-Using feature(s) {7, 9, 14} accuracy is 93.40%
-Using feature(s) {7, 9, 15} accuracy is 91.60%
-Using feature(s) {7, 9, 16} accuracy is 90.40%
+Using feature(s) { 1 } accuracy is  70.8 %
+Using feature(s) { 2 } accuracy is  71.0 %
+Using feature(s) { 3 } accuracy is  69.19999999999999 %
+Using feature(s) { 4 } accuracy is  66.60000000000001 %
+Using feature(s) { 5 } accuracy is  70.8 %
+Using feature(s) { 6 } accuracy is  71.2 %
+Using feature(s) { 7 } accuracy is  86.8 %
+Using feature(s) { 8 } accuracy is  67.60000000000001 %
+Using feature(s) { 9 } accuracy is  70.6 %
+Using feature(s) { 10 } accuracy is  68.8 %
+Using feature(s) { 11 } accuracy is  69.0 %
+Using feature(s) { 12 } accuracy is  67.0 %
+Using feature(s) { 13 } accuracy is  69.0 %
+Using feature(s) { 14 } accuracy is  70.0 %
+Using feature(s) { 15 } accuracy is  72.2 %
+Using feature(s) { 16 } accuracy is  70.19999999999999 %
+Feature set  [7]  was the best, accuracy is 86.8 %
+Using feature(s) { 1 7 } accuracy is  82.6 %
+Using feature(s) { 2 7 } accuracy is  82.6 %
+Using feature(s) { 3 7 } accuracy is  85.8 %
+Using feature(s) { 4 7 } accuracy is  84.2 %
+Using feature(s) { 5 7 } accuracy is  83.0 %
+Using feature(s) { 6 7 } accuracy is  82.19999999999999 %
+Using feature(s) { 7 8 } accuracy is  85.39999999999999 %
+Using feature(s) { 7 9 } accuracy is  96.2 %
+Using feature(s) { 7 10 } accuracy is  86.0 %
+Using feature(s) { 7 11 } accuracy is  84.8 %
+Using feature(s) { 7 12 } accuracy is  83.0 %
+Using feature(s) { 7 13 } accuracy is  83.6 %
+Using feature(s) { 7 14 } accuracy is  82.6 %
+Using feature(s) { 7 15 } accuracy is  84.8 %
+Using feature(s) { 7 16 } accuracy is  86.4 %
+Feature set  [7, 9]  was the best, accuracy is 96.2 %
+Using feature(s) { 1 7 9 } accuracy is  93.4 %
+Using feature(s) { 2 7 9 } accuracy is  92.80000000000001 %
+Using feature(s) { 3 7 9 } accuracy is  94.0 %
+Using feature(s) { 4 7 9 } accuracy is  93.60000000000001 %
+Using feature(s) { 5 7 9 } accuracy is  92.4 %
+Using feature(s) { 6 7 9 } accuracy is  90.4 %
+Using feature(s) { 7 8 9 } accuracy is  92.80000000000001 %
+Using feature(s) { 7 9 10 } accuracy is  92.2 %
+Using feature(s) { 7 9 11 } accuracy is  92.0 %
+Using feature(s) { 7 9 12 } accuracy is  92.0 %
+Using feature(s) { 7 9 13 } accuracy is  89.8 %
+Using feature(s) { 7 9 14 } accuracy is  93.4 %
+Using feature(s) { 7 9 15 } accuracy is  91.60000000000001 %
+Using feature(s) { 7 9 16 } accuracy is  90.4 %
 (Warning: Accuracy has decreased! Continuing search in case of local maxima)
-Feature set {3, 7, 9} was the best for this level, accuracy is 94.00%
-Using feature(s) {1, 3, 7, 9} accuracy is 89.60%
-Using feature(s) {2, 3, 7, 9} accuracy is 89.00%
-Using feature(s) {3, 4, 7, 9} accuracy is 88.00%
-Using feature(s) {3, 5, 7, 9} accuracy is 90.20%
-Using feature(s) {3, 6, 7, 9} accuracy is 86.80%
-Using feature(s) {3, 7, 8, 9} accuracy is 88.20%
-Using feature(s) {3, 7, 9, 10} accuracy is 87.80%
-Using feature(s) {3, 7, 9, 11} accuracy is 90.60%
-Using feature(s) {3, 7, 9, 12} accuracy is 89.60%
-Using feature(s) {3, 7, 9, 13} accuracy is 88.60%
-Using feature(s) {3, 7, 9, 14} accuracy is 88.00%
-Using feature(s) {3, 7, 9, 15} accuracy is 88.60%
-Using feature(s) {3, 7, 9, 16} accuracy is 89.60%
+Feature set  [7, 9]  was the best, accuracy is 96.2 %
+Using feature(s) { 1 3 7 9 } accuracy is  89.60000000000001 %
+Using feature(s) { 2 3 7 9 } accuracy is  89.0 %
+Using feature(s) { 3 4 7 9 } accuracy is  88.0 %
+Using feature(s) { 3 5 7 9 } accuracy is  90.2 %
+Using feature(s) { 3 6 7 9 } accuracy is  86.8 %
+Using feature(s) { 3 7 8 9 } accuracy is  88.2 %
+Using feature(s) { 3 7 9 10 } accuracy is  87.8 %
+Using feature(s) { 3 7 9 11 } accuracy is  90.60000000000001 %
+Using feature(s) { 3 7 9 12 } accuracy is  89.60000000000001 %
+Using feature(s) { 3 7 9 13 } accuracy is  88.6 %
+Using feature(s) { 3 7 9 14 } accuracy is  88.0 %
+Using feature(s) { 3 7 9 15 } accuracy is  88.6 %
+Using feature(s) { 3 7 9 16 } accuracy is  89.60000000000001 %
 (Warning: Accuracy has decreased! Continuing search in case of local maxima)
-Feature set {3, 7, 9, 11} was the best for this level, accuracy is 90.60%
-Using feature(s) {1, 3, 7, 9, 11} accuracy is 86.00%
-Using feature(s) {2, 3, 7, 9, 11} accuracy is 86.20%
-Using feature(s) {3, 4, 7, 9, 11} accuracy is 86.20%
-Using feature(s) {3, 5, 7, 9, 11} accuracy is 87.00%
-Using feature(s) {3, 6, 7, 9, 11} accuracy is 84.40%
-Using feature(s) {3, 7, 8, 9, 11} accuracy is 85.40%
-Using feature(s) {3, 7, 9, 10, 11} accuracy is 83.20%
-Using feature(s) {3, 7, 9, 11, 12} accuracy is 87.60%
-Using feature(s) {3, 7, 9, 11, 13} accuracy is 84.40%
-Using feature(s) {3, 7, 9, 11, 14} accuracy is 85.00%
-Using feature(s) {3, 7, 9, 11, 15} accuracy is 86.80%
-Using feature(s) {3, 7, 9, 11, 16} accuracy is 84.60%
+Feature set  [7, 9]  was the best, accuracy is 96.2 %
+Using feature(s) { 1 3 7 9 11 } accuracy is  86.0 %
+Using feature(s) { 2 3 7 9 11 } accuracy is  86.2 %
+Using feature(s) { 3 4 7 9 11 } accuracy is  86.2 %
+Using feature(s) { 3 5 7 9 11 } accuracy is  87.0 %
+Using feature(s) { 3 6 7 9 11 } accuracy is  84.39999999999999 %
+Using feature(s) { 3 7 8 9 11 } accuracy is  85.39999999999999 %
+Using feature(s) { 3 7 9 10 11 } accuracy is  83.2 %
+Using feature(s) { 3 7 9 11 12 } accuracy is  87.6 %
+Using feature(s) { 3 7 9 11 13 } accuracy is  84.39999999999999 %
+Using feature(s) { 3 7 9 11 14 } accuracy is  85.0 %
+Using feature(s) { 3 7 9 11 15 } accuracy is  86.8 %
+Using feature(s) { 3 7 9 11 16 } accuracy is  84.6 %
 (Warning: Accuracy has decreased! Continuing search in case of local maxima)
-Feature set {3, 7, 9, 11, 12} was the best for this level, accuracy is 87.60%
-Using feature(s) {1, 3, 7, 9, 11, 12} accuracy is 79.40%
-Using feature(s) {2, 3, 7, 9, 11, 12} accuracy is 84.20%
-Using feature(s) {3, 4, 7, 9, 11, 12} accuracy is 86.80%
-Using feature(s) {3, 5, 7, 9, 11, 12} accuracy is 83.40%
-Using feature(s) {3, 6, 7, 9, 11, 12} accuracy is 83.80%
-Using feature(s) {3, 7, 8, 9, 11, 12} accuracy is 81.00%
-Using feature(s) {3, 7, 9, 10, 11, 12} accuracy is 83.40%
-Using feature(s) {3, 7, 9, 11, 12, 13} accuracy is 81.00%
-Using feature(s) {3, 7, 9, 11, 12, 14} accuracy is 80.80%
-Using feature(s) {3, 7, 9, 11, 12, 15} accuracy is 82.00%
-Using feature(s) {3, 7, 9, 11, 12, 16} accuracy is 80.60%
+Feature set  [7, 9]  was the best, accuracy is 96.2 %
+Using feature(s) { 1 3 7 9 11 12 } accuracy is  79.4 %
+Using feature(s) { 2 3 7 9 11 12 } accuracy is  84.2 %
+Using feature(s) { 3 4 7 9 11 12 } accuracy is  86.8 %
+Using feature(s) { 3 5 7 9 11 12 } accuracy is  83.39999999999999 %
+Using feature(s) { 3 6 7 9 11 12 } accuracy is  83.8 %
+Using feature(s) { 3 7 8 9 11 12 } accuracy is  81.0 %
+Using feature(s) { 3 7 9 10 11 12 } accuracy is  83.39999999999999 %
+Using feature(s) { 3 7 9 11 12 13 } accuracy is  81.0 %
+Using feature(s) { 3 7 9 11 12 14 } accuracy is  80.80000000000001 %
+Using feature(s) { 3 7 9 11 12 15 } accuracy is  82.0 %
+Using feature(s) { 3 7 9 11 12 16 } accuracy is  80.60000000000001 %
 (Warning: Accuracy has decreased! Continuing search in case of local maxima)
-Feature set {3, 4, 7, 9, 11, 12} was the best for this level, accuracy is 86.80%
-Using feature(s) {1, 3, 4, 7, 9, 11, 12} accuracy is 78.00%
-Using feature(s) {2, 3, 4, 7, 9, 11, 12} accuracy is 81.60%
-Using feature(s) {3, 4, 5, 7, 9, 11, 12} accuracy is 79.80%
-Using feature(s) {3, 4, 6, 7, 9, 11, 12} accuracy is 83.20%
-Using feature(s) {3, 4, 7, 8, 9, 11, 12} accuracy is 79.00%
-Using feature(s) {3, 4, 7, 9, 10, 11, 12} accuracy is 79.20%
-Using feature(s) {3, 4, 7, 9, 11, 12, 13} accuracy is 80.60%
-Using feature(s) {3, 4, 7, 9, 11, 12, 14} accuracy is 81.00%
-Using feature(s) {3, 4, 7, 9, 11, 12, 15} accuracy is 77.20%
-Using feature(s) {3, 4, 7, 9, 11, 12, 16} accuracy is 81.80%
+Feature set  [7, 9]  was the best, accuracy is 96.2 %
+Using feature(s) { 1 3 4 7 9 11 12 } accuracy is  78.0 %
+Using feature(s) { 2 3 4 7 9 11 12 } accuracy is  81.6 %
+Using feature(s) { 3 4 5 7 9 11 12 } accuracy is  79.80000000000001 %
+Using feature(s) { 3 4 6 7 9 11 12 } accuracy is  83.2 %
+Using feature(s) { 3 4 7 8 9 11 12 } accuracy is  79.0 %
+Using feature(s) { 3 4 7 9 10 11 12 } accuracy is  79.2 %
+Using feature(s) { 3 4 7 9 11 12 13 } accuracy is  80.60000000000001 %
+Using feature(s) { 3 4 7 9 11 12 14 } accuracy is  81.0 %
+Using feature(s) { 3 4 7 9 11 12 15 } accuracy is  77.2 %
+Using feature(s) { 3 4 7 9 11 12 16 } accuracy is  81.8 %
 (Warning: Accuracy has decreased! Continuing search in case of local maxima)
-Feature set {3, 4, 6, 7, 9, 11, 12} was the best for this level, accuracy is 83.20%
-Using feature(s) {1, 3, 4, 6, 7, 9, 11, 12} accuracy is 79.80%
-Using feature(s) {2, 3, 4, 6, 7, 9, 11, 12} accuracy is 78.40%
-Using feature(s) {3, 4, 5, 6, 7, 9, 11, 12} accuracy is 79.40%
-Using feature(s) {3, 4, 6, 7, 8, 9, 11, 12} accuracy is 78.80%
-Using feature(s) {3, 4, 6, 7, 9, 10, 11, 12} accuracy is 76.00%
-Using feature(s) {3, 4, 6, 7, 9, 11, 12, 13} accuracy is 74.60%
-Using feature(s) {3, 4, 6, 7, 9, 11, 12, 14} accuracy is 80.00%
-Using feature(s) {3, 4, 6, 7, 9, 11, 12, 15} accuracy is 78.60%
-Using feature(s) {3, 4, 6, 7, 9, 11, 12, 16} accuracy is 79.60%
+Feature set  [7, 9]  was the best, accuracy is 96.2 %
+Using feature(s) { 1 3 4 6 7 9 11 12 } accuracy is  79.80000000000001 %
+Using feature(s) { 2 3 4 6 7 9 11 12 } accuracy is  78.4 %
+Using feature(s) { 3 4 5 6 7 9 11 12 } accuracy is  79.4 %
+Using feature(s) { 3 4 6 7 8 9 11 12 } accuracy is  78.8 %
+Using feature(s) { 3 4 6 7 9 10 11 12 } accuracy is  76.0 %
+Using feature(s) { 3 4 6 7 9 11 12 13 } accuracy is  74.6 %
+Using feature(s) { 3 4 6 7 9 11 12 14 } accuracy is  80.0 %
+Using feature(s) { 3 4 6 7 9 11 12 15 } accuracy is  78.60000000000001 %
+Using feature(s) { 3 4 6 7 9 11 12 16 } accuracy is  79.60000000000001 %
 (Warning: Accuracy has decreased! Continuing search in case of local maxima)
-Feature set {3, 4, 6, 7, 9, 11, 12, 14} was the best for this level, accuracy is 80.00%
-Using feature(s) {1, 3, 4, 6, 7, 9, 11, 12, 14} accuracy is 77.60%
-Using feature(s) {2, 3, 4, 6, 7, 9, 11, 12, 14} accuracy is 76.20%
-Using feature(s) {3, 4, 5, 6, 7, 9, 11, 12, 14} accuracy is 75.80%
-Using feature(s) {3, 4, 6, 7, 8, 9, 11, 12, 14} accuracy is 76.20%
-Using feature(s) {3, 4, 6, 7, 9, 10, 11, 12, 14} accuracy is 77.20%
-Using feature(s) {3, 4, 6, 7, 9, 11, 12, 13, 14} accuracy is 76.20%
-Using feature(s) {3, 4, 6, 7, 9, 11, 12, 14, 15} accuracy is 78.80%
-Using feature(s) {3, 4, 6, 7, 9, 11, 12, 14, 16} accuracy is 77.20%
+Feature set  [7, 9]  was the best, accuracy is 96.2 %
+Using feature(s) { 1 3 4 6 7 9 11 12 14 } accuracy is  77.60000000000001 %
+Using feature(s) { 2 3 4 6 7 9 11 12 14 } accuracy is  76.2 %
+Using feature(s) { 3 4 5 6 7 9 11 12 14 } accuracy is  75.8 %
+Using feature(s) { 3 4 6 7 8 9 11 12 14 } accuracy is  76.2 %
+Using feature(s) { 3 4 6 7 9 10 11 12 14 } accuracy is  77.2 %
+Using feature(s) { 3 4 6 7 9 11 12 13 14 } accuracy is  76.2 %
+Using feature(s) { 3 4 6 7 9 11 12 14 15 } accuracy is  78.8 %
+Using feature(s) { 3 4 6 7 9 11 12 14 16 } accuracy is  77.2 %
 (Warning: Accuracy has decreased! Continuing search in case of local maxima)
-Feature set {3, 4, 6, 7, 9, 11, 12, 14, 15} was the best for this level, accuracy is 78.80%
-Using feature(s) {1, 3, 4, 6, 7, 9, 11, 12, 14, 15} accuracy is 77.00%
-Using feature(s) {2, 3, 4, 6, 7, 9, 11, 12, 14, 15} accuracy is 75.20%
-Using feature(s) {3, 4, 5, 6, 7, 9, 11, 12, 14, 15} accuracy is 75.00%
-Using feature(s) {3, 4, 6, 7, 8, 9, 11, 12, 14, 15} accuracy is 74.40%
-Using feature(s) {3, 4, 6, 7, 9, 10, 11, 12, 14, 15} accuracy is 79.20%
-Using feature(s) {3, 4, 6, 7, 9, 11, 12, 13, 14, 15} accuracy is 78.60%
-Using feature(s) {3, 4, 6, 7, 9, 11, 12, 14, 15, 16} accuracy is 76.20%
-Feature set {3, 4, 6, 7, 9, 10, 11, 12, 14, 15} was the best for this level, accuracy is 79.20%
-Using feature(s) {1, 3, 4, 6, 7, 9, 10, 11, 12, 14, 15} accuracy is 76.40%
-Using feature(s) {2, 3, 4, 6, 7, 9, 10, 11, 12, 14, 15} accuracy is 75.40%
-Using feature(s) {3, 4, 5, 6, 7, 9, 10, 11, 12, 14, 15} accuracy is 77.00%
-Using feature(s) {3, 4, 6, 7, 8, 9, 10, 11, 12, 14, 15} accuracy is 73.80%
-Using feature(s) {3, 4, 6, 7, 9, 10, 11, 12, 13, 14, 15} accuracy is 75.80%
-Using feature(s) {3, 4, 6, 7, 9, 10, 11, 12, 14, 15, 16} accuracy is 73.80%
+Feature set  [7, 9]  was the best, accuracy is 96.2 %
+Using feature(s) { 1 3 4 6 7 9 11 12 14 15 } accuracy is  77.0 %
+Using feature(s) { 2 3 4 6 7 9 11 12 14 15 } accuracy is  75.2 %
+Using feature(s) { 3 4 5 6 7 9 11 12 14 15 } accuracy is  75.0 %
+Using feature(s) { 3 4 6 7 8 9 11 12 14 15 } accuracy is  74.4 %
+Using feature(s) { 3 4 6 7 9 10 11 12 14 15 } accuracy is  79.2 %
+Using feature(s) { 3 4 6 7 9 11 12 13 14 15 } accuracy is  78.60000000000001 %
+Using feature(s) { 3 4 6 7 9 11 12 14 15 16 } accuracy is  76.2 %
+Feature set  [7, 9]  was the best, accuracy is 96.2 %
+Using feature(s) { 1 3 4 6 7 9 10 11 12 14 15 } accuracy is  76.4 %
+Using feature(s) { 2 3 4 6 7 9 10 11 12 14 15 } accuracy is  75.4 %
+Using feature(s) { 3 4 5 6 7 9 10 11 12 14 15 } accuracy is  77.0 %
+Using feature(s) { 3 4 6 7 8 9 10 11 12 14 15 } accuracy is  73.8 %
+Using feature(s) { 3 4 6 7 9 10 11 12 13 14 15 } accuracy is  75.8 %
+Using feature(s) { 3 4 6 7 9 10 11 12 14 15 16 } accuracy is  73.8 %
 (Warning: Accuracy has decreased! Continuing search in case of local maxima)
-Feature set {3, 4, 5, 6, 7, 9, 10, 11, 12, 14, 15} was the best for this level, accuracy is 77.00%
-Using feature(s) {1, 3, 4, 5, 6, 7, 9, 10, 11, 12, 14, 15} accuracy is 73.60%
-Using feature(s) {2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 14, 15} accuracy is 72.80%
-Using feature(s) {3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15} accuracy is 75.60%
-Using feature(s) {3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15} accuracy is 74.40%
-Using feature(s) {3, 4, 5, 6, 7, 9, 10, 11, 12, 14, 15, 16} accuracy is 73.60%
+Feature set  [7, 9]  was the best, accuracy is 96.2 %
+Using feature(s) { 1 3 4 5 6 7 9 10 11 12 14 15 } accuracy is  73.6 %
+Using feature(s) { 2 3 4 5 6 7 9 10 11 12 14 15 } accuracy is  72.8 %
+Using feature(s) { 3 4 5 6 7 8 9 10 11 12 14 15 } accuracy is  75.6 %
+Using feature(s) { 3 4 5 6 7 9 10 11 12 13 14 15 } accuracy is  74.4 %
+Using feature(s) { 3 4 5 6 7 9 10 11 12 14 15 16 } accuracy is  73.6 %
 (Warning: Accuracy has decreased! Continuing search in case of local maxima)
-Feature set {3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15} was the best for this level, accuracy is 75.60%
-Using feature(s) {1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15} accuracy is 74.80%
-Using feature(s) {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15} accuracy is 71.80%
-Using feature(s) {3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15} accuracy is 75.20%
-Using feature(s) {3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 16} accuracy is 71.60%
+Feature set  [7, 9]  was the best, accuracy is 96.2 %
+Using feature(s) { 1 3 4 5 6 7 8 9 10 11 12 14 15 } accuracy is  74.8 %
+Using feature(s) { 2 3 4 5 6 7 8 9 10 11 12 14 15 } accuracy is  71.8 %
+Using feature(s) { 3 4 5 6 7 8 9 10 11 12 13 14 15 } accuracy is  75.2 %
+Using feature(s) { 3 4 5 6 7 8 9 10 11 12 14 15 16 } accuracy is  71.6 %
 (Warning: Accuracy has decreased! Continuing search in case of local maxima)
-Feature set {3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15} was the best for this level, accuracy is 75.20%
-Using feature(s) {1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15} accuracy is 74.40%
-Using feature(s) {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15} accuracy is 72.80%
-Using feature(s) {3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16} accuracy is 74.40%
+Feature set  [7, 9]  was the best, accuracy is 96.2 %
+Using feature(s) { 1 3 4 5 6 7 8 9 10 11 12 13 14 15 } accuracy is  74.4 %
+Using feature(s) { 2 3 4 5 6 7 8 9 10 11 12 13 14 15 } accuracy is  72.8 %
+Using feature(s) { 3 4 5 6 7 8 9 10 11 12 13 14 15 16 } accuracy is  74.4 %
 (Warning: Accuracy has decreased! Continuing search in case of local maxima)
-Feature set {1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15} was the best for this level, accuracy is 74.40%
-Using feature(s) {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15} accuracy is 73.40%
-Using feature(s) {1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16} accuracy is 75.20%
-Feature set {1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16} was the best for this level, accuracy is 75.20%
-Using feature(s) {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16} accuracy is 73.40%
+Feature set  [7, 9]  was the best, accuracy is 96.2 %
+Using feature(s) { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 } accuracy is  73.4 %
+Using feature(s) { 1 3 4 5 6 7 8 9 10 11 12 13 14 15 16 } accuracy is  75.2 %
+Feature set  [7, 9]  was the best, accuracy is 96.2 %
+Using feature(s) { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 } accuracy is  73.4 %
 (Warning: Accuracy has decreased! Continuing search in case of local maxima)
-Feature set {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16} was the best for this level, accuracy is 73.40%
-
-
-Finished search!! The best feature subset is {7, 9} with accuracy 96.20%
-
+Feature set  [7, 9]  was the best, accuracy is 96.2 %
+Finished search!! The best feature subset is { 7 9 } which has an accuracy of  96.2 %
 
 
 
 2) Backward Selection
 
-
 Welcome to Advaith Tontalapur's Feature Selection Algorithm.
-Type in the name of the file to test: CS170_Small_DataSet__26.txt             
+Type in the name of the file to test: CS170_Small_DataSet__26.txt
 Type the number of the algorithm you want to run. 
  1) Forward Selection 
  2) Backward Elimination 
@@ -209,6 +201,7 @@ Using feature(s) { 1 2 3 4 5 6 7 8 9 10 11 12 14 15 16 } accuracy is  73.0 %
 Using feature(s) { 1 2 3 4 5 6 7 8 9 10 11 12 13 15 16 } accuracy is  74.6 %
 Using feature(s) { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 16 } accuracy is  73.2 %
 Using feature(s) { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 } accuracy is  73.4 %
+Feature set  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16]  was the best, accuracy is 76.8 %
 Using feature(s) { 2 3 4 5 6 7 8 9 10 12 13 14 15 16 } accuracy is  76.0 %
 Using feature(s) { 1 3 4 5 6 7 8 9 10 12 13 14 15 16 } accuracy is  76.8 %
 Using feature(s) { 1 2 4 5 6 7 8 9 10 12 13 14 15 16 } accuracy is  74.2 %
@@ -224,6 +217,7 @@ Using feature(s) { 1 2 3 4 5 6 7 8 9 10 12 14 15 16 } accuracy is  73.8 %
 Using feature(s) { 1 2 3 4 5 6 7 8 9 10 12 13 15 16 } accuracy is  77.60000000000001 %
 Using feature(s) { 1 2 3 4 5 6 7 8 9 10 12 13 14 16 } accuracy is  75.8 %
 Using feature(s) { 1 2 3 4 5 6 7 8 9 10 12 13 14 15 } accuracy is  73.6 %
+Feature set  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 15, 16]  was the best, accuracy is 77.60000000000001 %
 Using feature(s) { 2 3 4 5 6 7 8 9 10 12 13 15 16 } accuracy is  76.6 %
 Using feature(s) { 1 3 4 5 6 7 8 9 10 12 13 15 16 } accuracy is  77.2 %
 Using feature(s) { 1 2 4 5 6 7 8 9 10 12 13 15 16 } accuracy is  76.4 %
@@ -238,6 +232,8 @@ Using feature(s) { 1 2 3 4 5 6 7 8 9 10 13 15 16 } accuracy is  74.4 %
 Using feature(s) { 1 2 3 4 5 6 7 8 9 10 12 15 16 } accuracy is  76.2 %
 Using feature(s) { 1 2 3 4 5 6 7 8 9 10 12 13 16 } accuracy is  75.0 %
 Using feature(s) { 1 2 3 4 5 6 7 8 9 10 12 13 15 } accuracy is  77.2 %
+(Warning: Accuracy has decreased! Continuing search in case of local maxima)
+Feature set  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 15, 16]  was the best, accuracy is 77.60000000000001 %
 Using feature(s) { 3 4 5 6 7 8 9 10 12 13 15 16 } accuracy is  75.2 %
 Using feature(s) { 1 4 5 6 7 8 9 10 12 13 15 16 } accuracy is  75.2 %
 Using feature(s) { 1 3 5 6 7 8 9 10 12 13 15 16 } accuracy is  74.0 %
@@ -251,6 +247,7 @@ Using feature(s) { 1 3 4 5 6 7 8 9 10 13 15 16 } accuracy is  78.60000000000001 
 Using feature(s) { 1 3 4 5 6 7 8 9 10 12 15 16 } accuracy is  75.8 %
 Using feature(s) { 1 3 4 5 6 7 8 9 10 12 13 16 } accuracy is  76.2 %
 Using feature(s) { 1 3 4 5 6 7 8 9 10 12 13 15 } accuracy is  77.2 %
+Feature set  [1, 3, 4, 5, 6, 7, 8, 9, 10, 13, 15, 16]  was the best, accuracy is 78.60000000000001 %
 Using feature(s) { 3 4 5 6 7 8 9 10 13 15 16 } accuracy is  77.0 %
 Using feature(s) { 1 4 5 6 7 8 9 10 13 15 16 } accuracy is  76.2 %
 Using feature(s) { 1 3 5 6 7 8 9 10 13 15 16 } accuracy is  74.6 %
@@ -263,6 +260,7 @@ Using feature(s) { 1 3 4 5 6 7 8 9 13 15 16 } accuracy is  76.4 %
 Using feature(s) { 1 3 4 5 6 7 8 9 10 15 16 } accuracy is  75.8 %
 Using feature(s) { 1 3 4 5 6 7 8 9 10 13 16 } accuracy is  79.2 %
 Using feature(s) { 1 3 4 5 6 7 8 9 10 13 15 } accuracy is  76.0 %
+Feature set  [1, 3, 4, 5, 6, 7, 8, 9, 10, 13, 16]  was the best, accuracy is 79.2 %
 Using feature(s) { 3 4 5 6 7 8 9 10 13 16 } accuracy is  79.2 %
 Using feature(s) { 1 4 5 6 7 8 9 10 13 16 } accuracy is  75.8 %
 Using feature(s) { 1 3 5 6 7 8 9 10 13 16 } accuracy is  75.4 %
@@ -274,6 +272,7 @@ Using feature(s) { 1 3 4 5 6 7 8 10 13 16 } accuracy is  70.39999999999999 %
 Using feature(s) { 1 3 4 5 6 7 8 9 13 16 } accuracy is  77.8 %
 Using feature(s) { 1 3 4 5 6 7 8 9 10 16 } accuracy is  77.0 %
 Using feature(s) { 1 3 4 5 6 7 8 9 10 13 } accuracy is  77.8 %
+Feature set  [1, 3, 4, 5, 6, 7, 8, 9, 10, 13, 16]  was the best, accuracy is 79.2 %
 Using feature(s) { 4 5 6 7 8 9 10 13 16 } accuracy is  76.4 %
 Using feature(s) { 3 5 6 7 8 9 10 13 16 } accuracy is  79.4 %
 Using feature(s) { 3 4 6 7 8 9 10 13 16 } accuracy is  77.60000000000001 %
@@ -284,6 +283,7 @@ Using feature(s) { 3 4 5 6 7 8 10 13 16 } accuracy is  72.6 %
 Using feature(s) { 3 4 5 6 7 8 9 13 16 } accuracy is  79.0 %
 Using feature(s) { 3 4 5 6 7 8 9 10 16 } accuracy is  76.6 %
 Using feature(s) { 3 4 5 6 7 8 9 10 13 } accuracy is  76.2 %
+Feature set  [3, 4, 5, 7, 8, 9, 10, 13, 16]  was the best, accuracy is 79.80000000000001 %
 Using feature(s) { 4 5 7 8 9 10 13 16 } accuracy is  78.0 %
 Using feature(s) { 3 5 7 8 9 10 13 16 } accuracy is  80.80000000000001 %
 Using feature(s) { 3 4 7 8 9 10 13 16 } accuracy is  80.0 %
@@ -293,6 +293,7 @@ Using feature(s) { 3 4 5 7 8 10 13 16 } accuracy is  74.4 %
 Using feature(s) { 3 4 5 7 8 9 13 16 } accuracy is  78.8 %
 Using feature(s) { 3 4 5 7 8 9 10 16 } accuracy is  79.0 %
 Using feature(s) { 3 4 5 7 8 9 10 13 } accuracy is  79.4 %
+Feature set  [3, 5, 7, 8, 9, 10, 13, 16]  was the best, accuracy is 80.80000000000001 %
 Using feature(s) { 5 7 8 9 10 13 16 } accuracy is  80.60000000000001 %
 Using feature(s) { 3 7 8 9 10 13 16 } accuracy is  80.2 %
 Using feature(s) { 3 5 8 9 10 13 16 } accuracy is  73.6 %
@@ -301,6 +302,7 @@ Using feature(s) { 3 5 7 8 10 13 16 } accuracy is  76.2 %
 Using feature(s) { 3 5 7 8 9 13 16 } accuracy is  78.4 %
 Using feature(s) { 3 5 7 8 9 10 16 } accuracy is  77.4 %
 Using feature(s) { 3 5 7 8 9 10 13 } accuracy is  80.80000000000001 %
+Feature set  [3, 5, 7, 8, 9, 10, 13, 16]  was the best, accuracy is 80.80000000000001 %
 Using feature(s) { 5 7 8 9 10 13 } accuracy is  80.80000000000001 %
 Using feature(s) { 3 7 8 9 10 13 } accuracy is  82.39999999999999 %
 Using feature(s) { 3 5 8 9 10 13 } accuracy is  71.6 %
@@ -308,25 +310,36 @@ Using feature(s) { 3 5 7 9 10 13 } accuracy is  78.60000000000001 %
 Using feature(s) { 3 5 7 8 10 13 } accuracy is  77.4 %
 Using feature(s) { 3 5 7 8 9 13 } accuracy is  83.39999999999999 %
 Using feature(s) { 3 5 7 8 9 10 } accuracy is  81.39999999999999 %
+Feature set  [3, 5, 7, 8, 9, 13]  was the best, accuracy is 83.39999999999999 %
 Using feature(s) { 5 7 8 9 13 } accuracy is  83.6 %
 Using feature(s) { 3 7 8 9 13 } accuracy is  86.4 %
 Using feature(s) { 3 5 8 9 13 } accuracy is  72.0 %
 Using feature(s) { 3 5 7 9 13 } accuracy is  84.2 %
 Using feature(s) { 3 5 7 8 13 } accuracy is  76.8 %
 Using feature(s) { 3 5 7 8 9 } accuracy is  86.0 %
+Feature set  [3, 7, 8, 9, 13]  was the best, accuracy is 86.4 %
 Using feature(s) { 7 8 9 13 } accuracy is  87.2 %
 Using feature(s) { 3 8 9 13 } accuracy is  71.8 %
 Using feature(s) { 3 7 9 13 } accuracy is  88.6 %
 Using feature(s) { 3 7 8 13 } accuracy is  79.60000000000001 %
 Using feature(s) { 3 7 8 9 } accuracy is  88.2 %
+Feature set  [3, 7, 9, 13]  was the best, accuracy is 88.6 %
 Using feature(s) { 7 9 13 } accuracy is  89.8 %
 Using feature(s) { 3 9 13 } accuracy is  73.0 %
 Using feature(s) { 3 7 13 } accuracy is  83.39999999999999 %
 Using feature(s) { 3 7 9 } accuracy is  94.0 %
+Feature set  [3, 7, 9]  was the best, accuracy is 94.0 %
 Using feature(s) { 7 9 } accuracy is  96.2 %
 Using feature(s) { 3 9 } accuracy is  76.4 %
 Using feature(s) { 3 7 } accuracy is  85.8 %
+Feature set  [7, 9]  was the best, accuracy is 96.2 %
 Using feature(s) { 9 } accuracy is  70.6 %
 Using feature(s) { 7 } accuracy is  86.8 %
+(Warning: Accuracy has decreased! Continuing search in case of local maxima)
+Feature set  [7, 9]  was the best, accuracy is 96.2 %
 Using feature(s) { } accuracy is  81.0 %
+(Warning: Accuracy has decreased! Continuing search in case of local maxima)
+Feature set  [7, 9]  was the best, accuracy is 96.2 %
 Finished search!! The best feature subset is { 7 9 } which has an accuracy of  96.2 %
+
+
